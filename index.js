@@ -17,4 +17,8 @@ app.post("/webhooks/openai", (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Running on ${PORT}`));
+const HOST = "0.0.0.0";
+
+app.listen(PORT, HOST, () => {
+  console.log(`Running on ${HOST}:${PORT}`);
+});
